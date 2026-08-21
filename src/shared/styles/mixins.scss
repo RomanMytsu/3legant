@@ -1,0 +1,20 @@
+@use "@/shared/styles/breakpoints" as *;
+@use "sass:map";
+
+@mixin max-width($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: '#{$breakpoint}'. Available values: #{map.keys($breakpoints)}";
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

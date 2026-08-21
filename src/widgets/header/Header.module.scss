@@ -1,0 +1,95 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 18px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__leftGroup {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  &__burgerBtn {
+    display: none;
+
+    @include max-width("tablet") {
+      display: block;
+    }
+  }
+
+  &__logoLink {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: $brand-color;
+
+    &Dot {
+      color: $neutral-04-1000;
+    }
+  }
+
+  &__nav {
+    @include max-width("tablet") {
+      display: none;
+    }
+  }
+
+  &__navList {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__navLink {
+    font-family: $third-family;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $neutral-04-1000;
+    transition: color 0.4s ease;
+
+    &_active {
+      color: $neutral-07-1000;
+    }
+
+    @include hover {
+      color: $neutral-07-1000;
+    }
+  }
+
+  &__rightGroup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__actionBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $neutral-07-1000;
+    transition: color 0.4s ease;
+
+    @include hover {
+      color: $neutral-04-1000;
+    }
+  }
+
+  &__searchBtn,
+  &__userBtn {
+    @include max-width("tablet") {
+      display: none;
+    }
+  }
+}

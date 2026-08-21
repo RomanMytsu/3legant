@@ -1,0 +1,18 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-burger" viewBox="0 0 32 32" fill="none" stroke="currentColor">
+      <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M9.333 10.667h13.333M9.333 16h13.333M9.333 21.333h13.333"></path>
+    </symbol>
+    <symbol id="icon-cart" viewBox="0 0 32 32" fill="none" stroke="currentColor">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M12 8v1.333c0 2.209 1.791 4 4 4s4-1.791 4-4v0-1.333"></path>
+      <path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M20.816 4h-9.631c-0 0-0 0-0.001 0-2.636 0-4.825 1.912-5.256 4.424l-0.005 0.032-2.223 13.333c-0.046 0.264-0.073 0.567-0.073 0.877 0 2.946 2.388 5.333 5.333 5.333 0 0 0 0 0.001 0h14.075c0 0 0 0 0.001 0 2.946 0 5.333-2.388 5.333-5.333 0-0.31-0.026-0.614-0.077-0.909l0.005 0.032-2.223-13.333c-0.436-2.544-2.625-4.456-5.26-4.456h-0z"></path>
+    </symbol>
+    <symbol id="icon-profile" viewBox="0 0 32 32" fill="none" stroke="currentColor">
+      <path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M24.745 26.065c-1.364-3.573-4.764-6.066-8.745-6.066s-7.381 2.492-8.724 6.001l-0.022 0.064M7.255 26.065c2.32 2.030 5.378 3.268 8.725 3.268 0.007 0 0.015 0 0.022-0h-0.001c3.347 0 6.404-1.232 8.745-3.268 2.817-2.453 4.588-6.046 4.588-10.052 0-0.005 0-0.009 0-0.014v0.001c0-7.364-5.969-13.333-13.333-13.333s-13.333 5.969-13.333 13.333c0 0.004 0 0.008 0 0.013 0 4.006 1.771 7.599 4.572 10.039l0.016 0.014zM20 12c0 2.209-1.791 4-4 4s-4-1.791-4-4v0c0-2.209 1.791-4 4-4s4 1.791 4 4v0z"></path>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 32 32" fill="none" stroke="currentColor">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M24.667 24.667l4.667 4.667M28 15.333c0-6.996-5.671-12.667-12.667-12.667s-12.667 5.671-12.667 12.667v0c0 6.996 5.671 12.667 12.667 12.667s12.667-5.671 12.667-12.667v0"></path>
+    </symbol>
+  </defs>
+</svg>
+
