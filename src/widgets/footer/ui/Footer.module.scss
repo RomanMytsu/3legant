@@ -1,0 +1,113 @@
+.footer {
+  background-color: $neutral-07-1000;
+  padding: 80px 0 52px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brandGroup {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__logoDot {
+    color: $neutral-04-1000;
+  }
+
+  &__brandDivider {
+    width: 1px;
+    height: 24px;
+    background-color: $neutral-04-1000;
+  }
+
+  &__tagline {
+    font-size: 14px;
+    line-height: 1.57143;
+    color: $neutral-03-1000;
+  }
+
+  &__nav {
+    width: auto;
+  }
+
+  &__navList {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__navLink {
+    font-size: 14px;
+    line-height: 1.57143;
+    color: $neutral-01-1000;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 0.5px;
+    background-color: $neutral-04-1000;
+    margin: 49px 0 16px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__infoGroup {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  &__copyright {
+    font-family: $second-family;
+    font-size: 12px;
+    line-height: 1.66667;
+    color: $neutral-03-1000;
+  }
+
+  &__legalList {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  &__legalLink {
+    font-family: $second-family;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.66667;
+    color: $neutral-01-1000;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__socialLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__socialIcon {
+    color: $neutral-01-1000;
+  }
+}

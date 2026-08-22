@@ -3,7 +3,6 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  typedRoutes: true,
   experimental: {
     optimizePackageImports: ["lucide-react", "swiper"],
   },
