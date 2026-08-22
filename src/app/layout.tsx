@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Space_Grotesk } from "next/font/google";
-import { Header } from "@/widgets/header/Header";
+import { Header } from "@/widgets/header/ui/Header";
 import { Footer } from "@/widgets/footer/Footer";
 import "@/shared/styles/globals.scss";
 

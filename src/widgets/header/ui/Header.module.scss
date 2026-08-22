@@ -21,7 +21,7 @@
   &__burgerBtn {
     display: none;
 
-    @include max-width("tablet") {
+    @include max-width("laptop") {
       display: block;
     }
   }
@@ -34,13 +34,18 @@
     text-align: center;
     color: $brand-color;
 
+    @include max-width("tablet") {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
     &Dot {
       color: $neutral-04-1000;
     }
   }
 
   &__nav {
-    @include max-width("tablet") {
+    @include max-width("laptop") {
       display: none;
     }
   }

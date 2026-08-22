@@ -17,6 +17,7 @@
     "swiper": "^14.1.0"
   },
   "devDependencies": {
+    "@fluejs/noscroll": "^1.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
