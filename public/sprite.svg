@@ -31,6 +31,12 @@
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M8 4h16c2.946 0 5.333 2.388 5.333 5.333v13.333c0 2.946-2.388 5.333-5.333 5.333h-16c-2.946 0-5.333-2.388-5.333-5.333v-13.333c0-2.946 2.388-5.333 5.333-5.333z"></path>
 <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M13.929 11.632l6.352 3.176c0.44 0.224 0.736 0.673 0.736 1.192s-0.296 0.968-0.728 1.189l-0.008 0.003-6.352 3.176c-0.174 0.089-0.379 0.141-0.596 0.141-0.736 0-1.333-0.597-1.333-1.333v-6.352c0-0.736 0.597-1.333 1.333-1.333 0.217 0 0.422 0.052 0.604 0.144l-0.008-0.004z"></path>
 </symbol>
+<symbol id="icon-arrow-left" viewBox="0 0 32 32" fill="none" stroke="currentColor">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M6.667 16h18.666M6.667 16l8 8M6.667 16l8-8"></path>
+</symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 32 32" fill="none" stroke="currentColor">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M6.667 16h18.666M17.333 24l8-8M17.333 8l8 8"></path>
+</symbol>
   </defs>
 </svg>
 

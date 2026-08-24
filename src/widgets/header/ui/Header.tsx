@@ -37,7 +37,7 @@ const Header = () => {
                 />
               </button>
               <Link href="/" className={s.header__logoLink}>
-                3legant <span className={s.header__logoLinkDot}>.</span>
+                3legant<span className={s.header__logoLinkDot}>.</span>
               </Link>
             </div>
             <nav className={s.header__nav} aria-label="Main navigation">

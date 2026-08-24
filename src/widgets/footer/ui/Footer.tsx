@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import s from "./Footer.module.scss";
 import { LEGAL_LINKS, SOCIAL_LINKS } from "../model/data";
 import { NAV_LINKS } from "@/widgets/header/model/navigation";
 import { Icon } from "@/shared/ui/Icon";
+import s from "./Footer.module.scss";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,7 +20,6 @@ const Footer = () => {
             <span className={s.footer__brandDivider} aria-hidden="true" />
             <p className={s.footer__tagline}>Gift & Decoration Store</p>
           </div>
-
           <nav className={s.footer__nav} aria-label="Footer navigation">
             <ul className={s.footer__navList}>
               {NAV_LINKS.map(({ label, href }) => (
@@ -33,15 +32,12 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
-
         <div className={s.footer__separator} aria-hidden="true" />
-
         <div className={s.footer__bottom}>
           <div className={s.footer__infoGroup}>
             <p className={s.footer__copyright}>
               Copyright © {currentYear} 3legant. All rights reserved.
             </p>
-
             <ul className={s.footer__legalList}>
               {LEGAL_LINKS.map(({ label, href, id }) => (
                 <li key={id}>

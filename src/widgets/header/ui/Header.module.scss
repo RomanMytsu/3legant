@@ -6,6 +6,10 @@
   z-index: 999;
   padding: 18px 0;
 
+  @include max-width("laptop") {
+    padding: 16px 0;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -16,6 +20,10 @@
     display: flex;
     align-items: center;
     gap: 11px;
+
+    @include max-width("laptop") {
+      gap: 4px;
+    }
   }
 
   &__burgerBtn {
