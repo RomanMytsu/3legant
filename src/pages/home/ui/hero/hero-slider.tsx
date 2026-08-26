@@ -41,7 +41,7 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className={s.hero__slide}>
-            <div className={s["hero__image-wrapper"]}>
+            <div className={s.hero__imageWrapper}>
               <Image
                 src={slide.src}
                 alt={slide.alt}

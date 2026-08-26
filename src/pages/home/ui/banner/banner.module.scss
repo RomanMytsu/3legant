@@ -1,0 +1,153 @@
+.banner {
+  padding-bottom: 48px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @include max-width("laptop") {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    background-color: $neutral-02-1000;
+    overflow: hidden;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.11765;
+    letter-spacing: -0.02em;
+    color: $neutral-07-1000;
+    margin-bottom: 12px;
+
+    @include max-width("laptop") {
+      font-size: 28px;
+      line-height: 1.21429;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.03em;
+    color: $neutral-07-1000;
+    border-bottom: 1px solid $neutral-07-1000;
+    padding-bottom: 1px;
+    transition:
+      opacity 0.4s ease,
+      border-color 0.4s ease;
+
+    @include hover {
+      opacity: 0.7;
+    }
+
+    @include max-width("tablet") {
+      font-size: 14px;
+      line-height: 1.71429;
+    }
+  }
+
+  &__imageWrapper {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__image {
+    object-fit: contain;
+  }
+
+  &__cardLarge {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px;
+    min-height: 664px;
+
+    .banner__imageWrapper {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .banner__image {
+      object-position: center bottom;
+    }
+
+    @include max-width("laptop") {
+      grid-row: auto;
+      padding: 32px;
+      min-height: 377px;
+
+      .banner__imageWrapper {
+        height: 85%;
+      }
+
+      .banner__image {
+        object-fit: contain;
+        object-position: center bottom;
+      }
+    }
+  }
+
+  &__cardSmall {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 32px 32px 40px;
+    min-height: 319px;
+
+    .banner__imageWrapper {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .banner__image {
+      object-position: right center;
+    }
+
+    @include max-width("tablet") {
+      padding: 32px;
+      min-height: 180px;
+
+      .banner__imageWrapper {
+        top: 18px;
+        bottom: 12px;
+        left: 38px;
+        width: 98%;
+        height: calc(100% - 24px);
+      }
+
+      .banner__image {
+        object-fit: contain;
+        object-position: center bottom;
+      }
+    }
+  }
+}

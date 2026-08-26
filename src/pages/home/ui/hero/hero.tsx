@@ -1,30 +1,11 @@
-import clsx from "clsx";
-import slide1 from "@/shared/assets/images/hero/hero-slide-1.png";
-import { HeroSlider, SlideItem } from "./hero-slider";
+import { SLIDES_DATA } from "../../model/HeroItem";
+import { HeroSlider } from "./hero-slider";
 import s from "./hero.module.scss";
-
-const SLIDES_DATA: SlideItem[] = [
-  {
-    id: "1",
-    src: slide1,
-    alt: "Modern living room with brown leather sofa",
-  },
-  {
-    id: "2",
-    src: slide1,
-    alt: "Interior decoration example 2",
-  },
-  {
-    id: "3",
-    src: slide1,
-    alt: "Interior decoration example 3",
-  },
-];
 
 export const Hero = () => {
   return (
     <section className={s.hero}>
-      <div className={clsx("container", s["hero__container"])}>
+      <div className="container">
         <HeroSlider slides={SLIDES_DATA} />
 
         <div className={s.hero__content}>
