@@ -1,6 +1,11 @@
 .banner {
   padding-bottom: 48px;
 
+   @include max-width("laptop") {
+     padding-bottom: 32px;
+   }
+
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
