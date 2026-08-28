@@ -1,0 +1,70 @@
+.values {
+  padding-bottom: 48px;
+
+  @include max-width("tablet") {
+    padding-bottom: 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @include max-width("laptop") {
+      gap: 16px;
+    }
+
+    @include max-width("tablet") {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 8px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 32px;
+    background-color: $neutral-02-1000;
+
+    @include max-width("laptop") {
+      padding: 32px 24px;
+    }
+
+    @include max-width("tablet") {
+      padding: 32px 16px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 16px;
+    color: $neutral-07-1000;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $neutral-07-1000;
+
+    @include max-width("laptop") {
+      font-size: 16px;
+    }
+
+    @include max-width("tablet") {
+      font-size: 14px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $neutral-04-1000;
+
+    @include max-width("tablet") {
+      font-size: 12px;
+      line-height: 1.66;
+    }
+  }
+}

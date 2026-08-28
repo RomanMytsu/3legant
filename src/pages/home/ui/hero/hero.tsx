@@ -7,7 +7,6 @@ export const Hero = () => {
     <section className={s.hero}>
       <div className="container">
         <HeroSlider slides={SLIDES_DATA} />
-
         <div className={s.hero__content}>
           <h1 className={s.hero__title}>
             Simply Unique<span className={s.hero__slash}>/</span>
