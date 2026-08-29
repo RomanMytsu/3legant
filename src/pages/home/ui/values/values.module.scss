@@ -16,13 +16,15 @@
 
     @include max-width("tablet") {
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px 8px;
+      gap: 24px 8px;
     }
   }
 
   &__card {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 262px;
     padding: 48px 32px;
     background-color: $neutral-02-1000;
 
@@ -31,7 +33,7 @@
     }
 
     @include max-width("tablet") {
-      padding: 32px 16px;
+      padding: 30px 16px;
     }
   }
 
@@ -41,30 +43,30 @@
   }
 
   &__title {
-    margin-bottom: 8px;
-    font-weight: 600;
+    font-family: $second-family;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
     color: $neutral-07-1000;
+    margin-bottom: 8px;
 
     @include max-width("laptop") {
       font-size: 16px;
+      margin-bottom: 4px;
     }
 
     @include max-width("tablet") {
+      font-family: $font-family;
+      font-weight: 600;
       font-size: 14px;
+      line-height: 1.57143;
     }
   }
 
   &__description {
-    font-weight: 400;
+    font-family: $second-family;
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 1.71429;
     color: $neutral-04-1000;
-
-    @include max-width("tablet") {
-      font-size: 12px;
-      line-height: 1.66;
-    }
   }
 }
