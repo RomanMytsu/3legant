@@ -1,4 +1,5 @@
 import { Banner } from "./banner/banner";
+import { Articles } from "./blog/blog";
 import { Hero } from "./hero/hero";
 import { NewArrivals } from "./new-arrivals/new-arrivals";
 import { PromoBanner } from "./promo-banner/promo-banner";
@@ -12,6 +13,7 @@ export const HomePage = () => {
       <NewArrivals />
       <Values />
       <PromoBanner />
+      <Articles/>
     </>
   );
 };
