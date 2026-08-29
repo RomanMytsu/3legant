@@ -1,0 +1,95 @@
+.promoBanner {
+  background: $neutral-02-1000;
+
+  &__wrapper {
+    display: flex;
+
+    @include max-width("laptop") {
+      flex-direction: column;
+    }
+  }
+
+  &__imageWrapper {
+    position: relative;
+    width: 50%;
+    min-height: 532px;
+
+    @include max-width("laptop") {
+      width: 100%;
+      min-height: 367px;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 72px;
+
+    @include max-width("laptop") {
+      width: 100%;
+     padding: 58px 32px;
+    }
+  }
+
+  &__badge {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $blue;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: $neutral-07-1000;
+    margin-bottom: 16px;
+
+    @include max-width("laptop") {
+      font-size: 34px;
+      line-height: 1.11765;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: $neutral-07-1000;
+    margin-bottom: 24px;
+    max-width: 452px;
+
+    @include max-width("laptop") {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.03em;
+    color: $neutral-07-1000;
+    border-bottom: 1px solid $neutral-07-1000;
+    padding-bottom: 1px;
+    transition: opacity 0.4s ease;
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+}
