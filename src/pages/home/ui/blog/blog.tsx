@@ -1,5 +1,4 @@
 import type { StaticImageData } from "next/image";
-import clsx from "clsx";
 import Link from "next/link";
 import { Icon } from "@/shared/ui/Icon";
 import { MOCK_ARTICLES } from "../../model/ArticlesItem";

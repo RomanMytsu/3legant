@@ -1,0 +1,110 @@
+.newsletter {
+  position: relative;
+  background-color: #f2f4f6;
+  padding: 101px 0 93px;
+  overflow: hidden;
+
+  @include max-width("tablet") {
+    padding: 95px 0;
+  }
+
+  &__bg {
+    object-fit: cover;
+    max-height: 360px;
+
+    @include max-width("laptop") {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 488px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: $neutral-07-1000;
+    margin-bottom: 8px;
+
+    @include max-width("laptop") {
+      font-size: 28px;
+      line-height: 1.21429;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.66667;
+    text-align: center;
+    color: $neutral-07-1000;
+    margin-bottom: 32px;
+
+    @include max-width("laptop") {
+      font-size: 14px;
+      line-height: 1.57143;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $neutral-04-500;
+    padding: 12px 0;
+    transition: border-color 0.4s ease;
+
+    &:focus-within {
+      border-color: #141718;
+    }
+  }
+
+  &__icon {
+    color: $neutral-07-1000;
+    margin-right: 8px;
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #141718;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: -0.03em;
+      color: $neutral-04-1000;
+    }
+  }
+
+  &__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.03em;
+    color: $neutral-04-1000;
+    transition: color 0.4s ease;
+    padding-left: 8px;
+
+    @include hover {
+      color: #141718;
+    }
+  }
+}
