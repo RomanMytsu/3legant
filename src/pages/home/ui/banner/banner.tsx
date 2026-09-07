@@ -1,70 +1,47 @@
 import clsx from "clsx";
-import livingRoomImg from "@/shared/assets/images/banner/living-room.png";
-import bedroomImg from "@/shared/assets/images/banner/bedroom.png";
-import kitchenImg from "@/shared/assets/images/banner/kitchen.png";
-import s from "./banner.module.scss";
 import Link from "next/link";
 import { Icon } from "@/shared/ui/Icon";
 import Image from "next/image";
+import { getBanners } from "../../api/get-banners";
+import s from "./banner.module.scss";
 
-export const Banner = () => {
+export const Banner = async () => {
+  const banners = await getBanners();
   return (
     <section className={s.banner}>
       <div className={clsx("container", s.banner__container)}>
-        <article className={clsx(s.banner__card, s.banner__cardLarge)}>
-          <div className={s.banner__content}>
-            <h3 className={s.banner__title}>Living Room</h3>
-            <Link href="#" className={s.banner__link}>
-              Shop Now
-              <Icon name="arrow-right" size={20} />
-            </Link>
-          </div>
-          <div className={s.banner__imageWrapper}>
-            <Image
-              src={livingRoomImg}
-              alt="Living Room Armchair"
-              fill
-              sizes="(max-width: 768px) 50vw, 260px"
-              className={s.banner__image}
-            />
-          </div>
-        </article>
-        <article className={clsx(s.banner__card, s.banner__cardSmall)}>
-          <div className={s.banner__content}>
-            <h3 className={s.banner__title}>Bedroom</h3>
-            <Link href="#" className={s.banner__link}>
-              Shop Now
-              <Icon name="arrow-right" size={20} />
-            </Link>
-          </div>
-          <div className={s.banner__imageWrapper}>
-            <Image
-              src={bedroomImg}
-              alt="Bedroom Drawer"
-              fill
-              sizes="(max-width: 768px) 45vw, 260px"
-              className={s.banner__image}
-            />
-          </div>
-        </article>
-        <article className={clsx(s.banner__card, s.banner__cardSmall)}>
-          <div className={s.banner__content}>
-            <h3 className={s.banner__title}>Kitchen</h3>
-            <Link href="#" className={s.banner__link}>
-              Shop Now
-              <Icon name="arrow-right" size={20} />
-            </Link>
-          </div>
-          <div className={s.banner__imageWrapper}>
-            <Image
-              src={kitchenImg}
-              alt="Kitchen Toaster"
-              fill
-              sizes="(max-width: 768px) 45vw, 260px"
-              className={s.banner__image}
-            />
-          </div>
-        </article>
+        {banners.map((card) => (
+          <article
+            key={card.id}
+            className={clsx(
+              s.banner__card,
+              card.variant === "large"
+                ? s.banner__cardLarge
+                : s.banner__cardSmall,
+            )}
+          >
+            <div className={s.banner__content}>
+              <h3 className={s.banner__title}>{card.title}</h3>
+              <Link href={card.linkHref} className={s.banner__link}>
+                Shop Now
+                <Icon name="arrow-right" size={20} />
+              </Link>
+            </div>
+            <div className={s.banner__imageWrapper}>
+              <Image
+                src={card.imageUrl}
+                alt={card.alt}
+                fill
+                sizes={
+                  card.variant === "large"
+                    ? "(max-width: 768px) 50vw, 260px"
+                    : "(max-width: 768px) 45vw, 260px"
+                }
+                className={s.banner__image}
+              />
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

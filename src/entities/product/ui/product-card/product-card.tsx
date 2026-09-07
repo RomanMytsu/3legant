@@ -1,13 +1,13 @@
 import { Icon } from "@/shared/ui/Icon";
+import Image from "next/image";
 import s from "./product-card.module.scss";
-import Image, { type StaticImageData } from "next/image";
 
 export interface ProductCardProps {
   title: string;
   price: number;
   oldPrice?: number;
   rating: number;
-  image: StaticImageData;
+  image: string;
   isNew?: boolean;
   discount?: number;
 }

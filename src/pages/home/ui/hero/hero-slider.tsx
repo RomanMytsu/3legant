@@ -5,14 +5,14 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import clsx from "clsx";
 import { Icon } from "@/shared/ui/Icon";
 import s from "./hero.module.scss";
 
 export interface SlideItem {
   id: string;
-  src: StaticImageData;
+  src: string;
   alt: string;
 }
 
@@ -28,6 +28,7 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
         spaceBetween={0}
         slidesPerView={1}
         loop
+        grabCursor
         pagination={{
           clickable: true,
           bulletActiveClass: s["hero__bullet--active"],
@@ -47,7 +48,6 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
                 alt={slide.alt}
                 fill
                 priority={index === 0}
-                placeholder="blur"
                 sizes="(max-width: 1440px) 100vw, 1120px"
                 className={s.hero__image}
               />

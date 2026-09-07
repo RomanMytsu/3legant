@@ -1,12 +1,15 @@
-import { SLIDES_DATA } from "../../model/HeroItem";
+// import { SLIDES_DATA } from "../../model/HeroItem";
+import { getHeroSlides } from "../../api/get-hero-slides";
 import { HeroSlider } from "./hero-slider";
 import s from "./hero.module.scss";
 
-export const Hero = () => {
+export const Hero = async () => {
+  const slides = await getHeroSlides();
+
   return (
     <section className={s.hero}>
       <div className="container">
-        <HeroSlider slides={SLIDES_DATA} />
+        <HeroSlider slides={slides} />
         <div className={s.hero__content}>
           <h1 className={s.hero__title}>
             Simply Unique<span className={s.hero__slash}>/</span>
