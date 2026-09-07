@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Space_Grotesk } from "next/font/google";
 import { Header } from "@/widgets/header/ui/Header";
 import { Footer } from "@/widgets/footer/ui/Footer";
+import { ReactNode } from "react";
 import "@/shared/styles/globals.scss";
 
 const inter = Inter({
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     "Elevate your space with premium modern furniture and interior decor.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
