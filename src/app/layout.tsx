@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Space_Grotesk } from "next/font/google";
 import { Header } from "@/widgets/header/ui/Header";
 import { Footer } from "@/widgets/footer/ui/Footer";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import { AuthModal } from "@/features/auth/ui/auth-modal/auth-modal";
 import Providers from "./providers";
 import "@/shared/styles/globals.scss";
@@ -52,7 +52,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <main>{children}</main>
           <Footer />
-          <AuthModal />
+          <Suspense fallback={null}>
+            <AuthModal />
+          </Suspense>
         </Providers>
       </body>
     </html>
