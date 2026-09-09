@@ -8,6 +8,7 @@ import { NAV_LINKS } from "../model/navigation";
 import { Icon } from "@/shared/ui/Icon";
 import Link from "next/link";
 import { createPortal } from "react-dom";
+import { useAuthModal } from "@/features/auth/model/use-auth-modal";
 import s from "./MobileMenu.module.scss";
 
 interface MobileMenuProps {
@@ -18,6 +19,7 @@ interface MobileMenuProps {
 const DESKTOP_MEDIA_QUERY = "(min-width: 1024px)";
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  const { openAuthModal } = useAuthModal();
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
 
@@ -122,9 +124,16 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               <Icon name="heart" size={24} className={s.mobileMenu__icon} />
             </Link>
           </div>
-          <Link href="#" className={s.mobileMenu__signInBtn}>
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              openAuthModal("sign-in");
+            }}
+            className={s.mobileMenu__signInBtn}
+          >
             Sign In
-          </Link>
+          </button>
           <div className={s.mobileMenu__socials}>
             <a
               href="https://instagram.com"

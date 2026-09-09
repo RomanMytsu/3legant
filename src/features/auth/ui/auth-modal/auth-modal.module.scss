@@ -1,0 +1,59 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 450px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  &__closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $neutral-04-1000;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $neutral-07-1000;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid $neutral-03-1000;
+    margin-bottom: 24px;
+  }
+
+  &__tab {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    color: $neutral-04-1000;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+
+    &--active {
+      color: $neutral-07-1000;
+      border-bottom-color: $neutral-07-1000;
+    }
+  }
+}

@@ -3,6 +3,8 @@ import { Inter, Poppins, Space_Grotesk } from "next/font/google";
 import { Header } from "@/widgets/header/ui/Header";
 import { Footer } from "@/widgets/footer/ui/Footer";
 import { ReactNode } from "react";
+import { AuthModal } from "@/features/auth/ui/auth-modal/auth-modal";
+import Providers from "./providers";
 import "@/shared/styles/globals.scss";
 
 const inter = Inter({
@@ -46,9 +48,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <AuthModal />
+        </Providers>
       </body>
     </html>
   );

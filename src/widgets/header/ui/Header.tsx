@@ -5,11 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { NAV_LINKS } from "../model/navigation";
-import s from "./Header.module.scss";
 import { useCallback, useEffect, useState } from "react";
 import { MobileMenu } from "./MobileMenu";
+import { useAuthModal } from "@/features/auth/model/use-auth-modal";
+import s from "./Header.module.scss";
 
 const Header = () => {
+  const { openAuthModal } = useAuthModal();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
@@ -82,20 +84,20 @@ const Header = () => {
               >
                 <Icon name="search" size={24} />
               </button>
-              <Link
-                href="#"
+              <button
+                type="button"
+                onClick={() => openAuthModal("sign-up")}
                 className={clsx(s.header__actionBtn, s.header__userBtn)}
                 aria-label="User profile"
               >
                 <Icon name="profile" size={24} />
-              </Link>
-              <Link
-                href="#"
+              </button>
+              <button
                 className={clsx(s.header__actionBtn, s.header__cartBtn)}
                 aria-label="Shopping cart"
               >
                 <Icon name="cart" size={24} />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
