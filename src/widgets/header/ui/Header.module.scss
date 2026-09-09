@@ -5,6 +5,11 @@
   width: 100%;
   z-index: 999;
   padding: 18px 0;
+  transition: background-color 0.4s ease;
+
+  &_scrolled {
+    background-color: #fff;
+  }
 
   @include max-width("laptop") {
     padding: 16px 0;

@@ -6,19 +6,30 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { NAV_LINKS } from "../model/navigation";
 import s from "./Header.module.scss";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleOpenMenu = () => setIsMobileMenuOpen(true);
   const handleCloseMenu = useCallback(() => setIsMobileMenuOpen(false), []);
 
   return (
     <>
-      <header className={s.header}>
+      <header className={clsx(s.header, { [s.header_scrolled]: isScrolled })}>
         <div className="container">
           <div className={s.header__wrapper}>
             <div className={s.header__leftGroup}>

@@ -1,19 +1,11 @@
-import type { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Icon } from "@/shared/ui/Icon";
-import { MOCK_ARTICLES } from "../../model/ArticlesItem";
 import Image from "next/image";
-import { Route } from "next";
+import { getArticles } from "../../api/get-articles";
 import s from "./blog.module.scss";
 
-export interface Article {
-  id: string;
-  title: string;
-  image: StaticImageData;
-  href: Route;
-}
-
-export const Articles = () => {
+export const Articles = async () => {
+  const articles = await getArticles();
   return (
     <section className={s.articles}>
       <div className={"container"}>
@@ -25,7 +17,7 @@ export const Articles = () => {
           </Link>
         </div>
         <div className={s.articles__grid}>
-          {MOCK_ARTICLES.map((article) => (
+          {articles.map((article) => (
             <article className={s.articles__card} key={article.id}>
               <div className={s.articles__cardImageWrapper}>
                 <Image
